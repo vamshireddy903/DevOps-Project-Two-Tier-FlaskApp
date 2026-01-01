@@ -1,7 +1,7 @@
 # DevOps Project Report: Automated CI/CD Pipeline for a 2-Tier Flask Application on AWS
 
-**Author:** Prashant Gohel
-**Date:** August 23, 2025
+**Author:** Vamshi
+**Date:** December 31, 2025
 
 ---
 
@@ -111,6 +111,26 @@ This document outlines the step-by-step process for deploying a 2-tier web appli
 
 ---
 
+# Install docker-compose
+
+**1️⃣ Download docker-compose binary**
+
+     sudo curl -L "https://github.com/docker/compose/releases/download/v2.27.0/docker-compose-$(uname -s)-$(uname -m)" \
+    -o /usr/local/bin/docker-compose
+
+**2️⃣ Make it executable**
+
+    sudo chmod +x /usr/local/bin/docker-compose
+
+
+**3️⃣ Verify installation**
+    
+    docker-compose version
+
+✅ Expected output:
+
+     Docker Compose version v2.27.0
+     
 ### **5. Step 3: Jenkins Installation and Setup**
 
 1.  **Install Java (OpenJDK 17):**
