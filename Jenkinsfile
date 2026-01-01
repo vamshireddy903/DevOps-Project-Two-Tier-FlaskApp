@@ -6,6 +6,13 @@ pipeline{
                 git branch: 'main', url: 'https://github.com/vamshireddy903/DevOps-Project-Two-Tier-FlaskApp.git'
             }
         }
+        stage('check'){
+            steps{
+                sh 'whoami'
+                sh 'echo $HOME'
+                sh 'ls -la ~/.docker || echo "no docker config"'
+            }
+        }
         stage('Build image'){
             steps{
                 sh 'docker build -t flask-app .'
